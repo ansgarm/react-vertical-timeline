@@ -10,7 +10,7 @@ export default class Marker extends React.Component {
 
     return (
       <div className="timeline-marker" style={ style }>
-        <div className="text">{this.props.progress}</div>
+        <div className="text">{this.props.children || this.props.progress}</div>
       </div>
     );
   }

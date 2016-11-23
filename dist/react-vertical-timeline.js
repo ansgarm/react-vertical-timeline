@@ -82,11 +82,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(2);
 	
@@ -106,7 +106,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Timeline() {
 	    _classCallCheck(this, Timeline);
 	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Timeline).call(this));
+	    var _this = _possibleConstructorReturn(this, (Timeline.__proto__ || Object.getPrototypeOf(Timeline)).call(this));
 	
 	    _this.state = {
 	      progress: 0
@@ -193,6 +193,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	exports.default = Timeline;
 	
+	
 	Timeline.propTypes = {
 	  children: _react2.default.PropTypes.node,
 	  height: _react2.default.PropTypes.number.isRequired,
@@ -223,11 +224,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(2);
 	
@@ -247,7 +248,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Bookmark() {
 	    _classCallCheck(this, Bookmark);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Bookmark).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Bookmark.__proto__ || Object.getPrototypeOf(Bookmark)).apply(this, arguments));
 	  }
 	
 	  _createClass(Bookmark, [{
@@ -280,6 +281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	exports.default = Bookmark;
 	
+	
 	Bookmark.contextTypes = {
 	  height: _react2.default.PropTypes.number.isRequired,
 	  progress: _react2.default.PropTypes.number
@@ -297,11 +299,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(2);
 	
@@ -321,7 +323,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Marker() {
 	    _classCallCheck(this, Marker);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Marker).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Marker.__proto__ || Object.getPrototypeOf(Marker)).apply(this, arguments));
 	  }
 	
 	  _createClass(Marker, [{
@@ -337,7 +339,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'text' },
-	          this.props.progress
+	          this.props.children || this.props.progress
 	        )
 	      );
 	    }
@@ -347,6 +349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}(_react2.default.Component);
 	
 	exports.default = Marker;
+	
 	
 	Marker.contextTypes = {
 	  height: _react2.default.PropTypes.number.isRequired
